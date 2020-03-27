@@ -26,6 +26,10 @@ cp package-lock.json $dir
 cp package.json $dir
 cp README.md $dir
 
+cd $dir
+
+npm install --no-dev
+
 docker build -t qk.pt .
 
 docker tag qk.pt eu.gcr.io/quicky-272322/qk.pt:latest
