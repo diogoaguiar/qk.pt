@@ -21,7 +21,6 @@ cp -r routes $dir
 cp .dockerignore $dir
 cp .gitignore $dir
 cp app.js $dir
-cp docker-compose.yml $dir
 cp Dockerfile $dir
 cp package-lock.json $dir
 cp package.json $dir

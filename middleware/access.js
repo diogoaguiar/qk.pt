@@ -15,7 +15,8 @@ const access = async (req, res, next) => {
             url: `${req.protocol}://${req.get('host')}${req.originalUrl}`,
             ip: req.header('x-forwarded-for') || req.connection.remoteAddress,
             method: req.method,
-            body: req.body
+            body: req.body,
+            date: new Date()
         }
     };
 
