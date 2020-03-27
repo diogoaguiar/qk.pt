@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+    api:
+        build:
+            context: .
+        volumes:
+            - '/home/xoca/Source/qk.pt:/var/www/html'
+        ports:
+            - '8080:80'
+        environment:
+            - 'ENVIRONMENT=dev'
+        entrypoint:
+            - 'node_modules/.bin/nodemon'
+            - '-L'
