@@ -29,6 +29,10 @@ router.all('/:path', async (req, res) => {
     return res.redirect(301, url);
 });
 
+router.all('/*', (_, res) => {
+    return res.redirect(301, 'https://quicky.dg7.pt');
+});
+
 const isValidUrl = (url) => {
     try {
         new URL(url);

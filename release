@@ -2,6 +2,16 @@
 version=$1
 dir=releases/v$version
 
+if [ -z "$version" ]; then
+    echo "Invalid version";
+    exit;
+fi
+
+if [ -d "$dir" ]; then
+    echo "There is already a '$dir' folder";
+    exit;
+fi
+
 mkdir -p $dir
 
 cp -r bin $dir
